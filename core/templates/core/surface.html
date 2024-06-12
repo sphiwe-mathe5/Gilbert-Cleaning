@@ -1,0 +1,50 @@
+{% load static %}
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://unpkg.com/tailwindcss/dist/tailwind.min.css" />
+        <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,400i,700" rel="stylesheet" />
+        <script nomudule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+        <title>{% block title %}{%endblock%}Gilbert Cleaning Services</title>
+
+    </head>
+<body>
+
+<header class="header">
+    <div class="logo">Gilbert.M Cleaning</div>
+    <div id="menu-btn" class="menu-btn">☰</div> 
+    <nav class="nav">
+        <ul class="nav-list">
+            <li><a href="{% url 'index' %}" class="nav-item">Home</a></li>
+            <li><a href="{% url 'services' %}" class="nav-item">Services</a></li>
+            <li><a href="{% url 'login' %}" class="nav-item">Sustainability</a></li>
+        </ul>
+    </nav>
+</header>
+
+<div class="container-item">
+    <div class="image-section">
+        <img src="{% static 'images/WhatsApp_Image_2024-03-03_at_15.01.28.jpeg' %}"  alt="Service Image" class="service-image">
+    </div>
+
+    <div class="details-section">
+        <h1 class="service-title">Surface Cleaning</h1>
+        <p class="service-info"><strong>Price: </strong>R100</p>
+        <p class="service-info"><strong>Service Provider: </strong> Gilbert</p>
+
+        <p class="service-description">
+            <strong>Description:</strong><br>
+            General surface cleaning services to dust, wipe, and disinfect all types of surfaces, maintaining a clean and healthy environment in your home or office
+        </p>
+
+        <a href="{% url 'book' %}" class="book-button">Book Service</a>
+    </div>
+</div>
+
+<script src="{% static 'js/script.js' %}"></script>
+</body>
+</html>

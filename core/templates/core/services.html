@@ -1,0 +1,167 @@
+{% load static %}
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://unpkg.com/tailwindcss/dist/tailwind.min.css" />
+        <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,400i,700" rel="stylesheet" />
+        <script nomudule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+        <title>{% block title %}{%endblock%}Gilbert Cleaning Services</title>
+
+    </head>
+<body>
+
+<header class="header">
+    <div class="logo">Gilbert.M Cleaning</div>
+    <div id="menu-btn" class="menu-btn">☰</div> 
+    <nav class="nav">
+        <ul class="nav-list">
+            <li><a href="{% url 'index' %}" class="nav-item">Home</a></li>
+            <li><a href="{% url 'services' %}" class="nav-item">Services</a></li>
+            <li><a href="{% url 'login' %}" class="nav-item">Sustainability</a></li>
+        </ul>
+    </nav>
+</header>
+
+
+<div class="containero">
+    <div class="sidebar">
+        <hr class="separator">
+
+        <p class="title">Categories</p>
+
+        <ul class="category-list">
+            <li class="category-item">
+                <a href="{% url 'services' %}">Home Cleaning</a>
+            </li>
+            <li class="category-item">
+                <a href="#">Event Cleaning</a>
+            </li>
+            <!-- Add more categories as needed -->
+        </ul>
+    </div>
+
+    <div class="content">
+        <div class="items-grid">
+            <div class="item">
+                <a href="{% url 'window' %}">
+                    <div class="item-image">
+                        <img src="{% static 'images/WhatsApp_Image_2024-03-03_at_15.01.29_1.jpeg' %}" alt="Service 1">
+                    </div>
+                    <div class="item-info">
+                        <h2>Window Cleaning</h2>
+                    </div>
+                </a>
+            </div>
+            <div class="item">
+                <a href="{% url 'floor' %}">
+                    <div class="item-image">
+                        <img src="{% static 'images/WhatsApp_Image_2024-03-03_at_15.01.28_1.jpeg' %}" alt="Service 2">
+                    </div>
+                    <div class="item-info">
+                        <h2>Floor Cleaning</h2>
+                    </div>
+                </a>
+            </div>
+            <div class="item">
+                <a href="{% url 'surface' %}">
+                    <div class="item-image">
+                        <img src="{% static 'images/WhatsApp_Image_2024-03-03_at_15.01.28.jpeg' %}" alt="Service 3">
+                    </div>
+                    <div class="item-info">
+                        <h2>Surface Cleaning</h2>
+                    </div>
+                </a>
+            </div>
+            <div class="item">
+                <a href="{% url 'shower' %}">
+                    <div class="item-image">
+                        <img src="{% static 'images/WhatsApp_Image_2024-03-03_at_15.01.31.jpeg' %}" alt="Service 3">
+                    </div>
+                    <div class="item-info">
+                        <h2>Shower Cleaning</h2>
+                    </div>
+                </a>
+            </div>
+            <div class="item">
+                <a href="{% url 'move' %}">
+                    <div class="item-image">
+                        <img src="{% static 'images/WhatsApp_Image_2024-03-03_at_15.01.29.jpeg' %}" alt="Service 3">
+                    </div>
+                    <div class="item-info">
+                        <h2>Move in/out Cleaning</h2>
+                    </div>
+                </a>
+            </div>
+            <div class="item">
+                <a href="{% url 'carpet' %}">
+                    <div class="item-image">
+                        <img src="{% static 'images/WhatsApp_Image_2024-03-03_at_15.01.30_2.jpeg' %}" alt="Service 3">
+                    </div>
+                    <div class="item-info">
+                        <h2>Carpet Cleaning</h2>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<footer class="footer">
+    <div class="container grid list">
+        <div class="footer-brand">
+            <p class="footer-text">
+                &copy; 2022 Gilbert.M Cleaning. <br> All rights reserved.
+            </p>
+        </div>
+
+        <div class="footer-list">
+            <p class="h4 footer-list-title">Get in Touch</p>
+            <address class="footer-text">
+                1632 Phomolong, Tembisa
+            </address>
+            <a href="mailto:Libubugroup@gmail.com" class="footer-link">gilbertzipho24@gmail.com</a>
+            <a href="tel:+27769446549" class="footer-link">+27 78 520 0805</a>
+        </div>
+
+        <div class="footer-list">
+            <p class="h4 footer-list-title">Learn More</p>
+            <a href="#" class="footer-link">Services</a>
+            <a href="#" class="footer-link">Gallery</a>
+            <a href="#" class="footer-link">Terms of Use</a>
+        </div>
+
+        <div class="footer-list">
+            <p class="h4 footer-list-title">Subscribe to our Newsletter</p>
+            <form action="" class="input-wrapper">
+                <input type="email" name="email_address" placeholder="Email Address" required class="input-field">
+                <button type="submit" class="submit-btn">Join</button>
+            </form>
+        </div>
+
+        <ul class="social-list">
+            <li>
+                <p class="follow-us-text">Follow Us</p>
+            </li>
+            <li>
+                <a href="#" class="social-link">
+                    <ion-icon name="logo-facebook"></ion-icon>
+                </a>
+            </li>
+            <li>
+                <a href="#" class="social-link">
+                    <ion-icon name="logo-instagram"></ion-icon>
+                </a>
+            </li>
+        </ul>        
+    </div>
+</footer>
+
+<script src="{% static 'js/script.js' %}"></script>
+</body>
+</html>
+
