@@ -217,7 +217,7 @@ body {
     }
 
     .button-group {
-        margin-top: 25rem;
+        margin-top: 23rem;
         margin-left: 0;
         text-align: center;
     }
@@ -244,7 +244,7 @@ body {
 
     .button-group {
         flex-direction: column;
-        margin-top: 25rem;
+        margin-top: 23rem;
     }
 
     .button {
