@@ -9,7 +9,10 @@
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
-        <title>{% block title %}{%endblock%}Gilbert Cleaning Services</title>
+        <link rel="icon" href="{% static 'images/pagelogo.png' %}">
+        <link rel="shortcut icon" href="#">
+        <link rel="icon" href="{% static 'images/favicon.ico' %}">
+        <title>{% block title %}{%endblock%}Gilbert Cleaning</title>
 
     </head>
 <body>
@@ -26,11 +29,26 @@
     </nav>
 </header>
 
+<div class="containero">
+    <div class="sidebar">
+        <hr class="separator">
+
+        <p class="title">Categories</p>
+
+        <ul class="category-list">
+            <li class="category-item">
+                <a href="{% url 'services' %}">Home Cleaning</a>
+            </li>
+            <li class="category-item">
+                <a href="{% url 'eventsclean' %}">Event Cleaning</a>
+            </li>
+        </ul>
+    </div>
+
 
 <div class="container-item">
     <div class="details-section">
         <h1 class="service-title">Pre-Event Cleaning</h1>
-        <p class="service-info"><strong>Price: </strong>R100</p>
         <p class="service-info"><strong>Service Provider: </strong>Gilbert.M</p>
 
         <p class="service-description">
@@ -42,7 +60,6 @@
     </div>
     <div class="details-section">
         <h1 class="service-title">During-Event Cleaning</h1>
-        <p class="service-info"><strong>Price: </strong>R100</p>
         <p class="service-info"><strong>Service Provider: </strong>Gilbert.M</p>
 
         <p class="service-description">
@@ -54,7 +71,6 @@
     </div>
     <div class="details-section">
         <h1 class="service-title">Post-Event Cleaning</h1>
-        <p class="service-info"><strong>Price: </strong>R100</p>
         <p class="service-info"><strong>Service Provider: </strong>Gilbert.M</p>
 
         <p class="service-description">
@@ -66,7 +82,6 @@
     </div>
     <div class="details-section">
         <h1 class="service-title">Special Occasion Cleaning</h1>
-        <p class="service-info"><strong>Price: </strong>R100</p>
         <p class="service-info"><strong>Service Provider: </strong>Gilbert.M</p>
 
         <p class="service-description">

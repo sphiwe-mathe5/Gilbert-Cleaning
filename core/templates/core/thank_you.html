@@ -1,0 +1,48 @@
+{% load static %}
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,400i,700" rel="stylesheet" />
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link rel="icon" href="{% static 'images/pagelogo.png' %}">
+    <link rel="shortcut icon" href="#">
+    <link rel="icon" href="{% static 'images/favicon.ico' %}">
+    <title>Thank You</title>
+    <style>
+        body {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+          }
+          .container-box {
+            position: relative;
+            max-width: 700px;
+            width: 100%;
+            background: #fff;
+            padding: 25px;
+            border-radius: 8px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+          }
+          .container-box header {
+            font-size: 1.5rem;
+            color: #333;
+            font-weight: 500;
+            text-align: center;
+        
+          }
+          
+    </style>
+</head>
+<body>
+    <div class="container-box">
+        <h2 class="thank-you">Thank You for Enquiring About Our Services</h2>
+        <p>We Will Contact You Shortly To Confirm All Details.</p>
+        <a href="{% url 'index' %}" class="button secondary">Return To Home</a>
+    </div>
+</body>
+</html>

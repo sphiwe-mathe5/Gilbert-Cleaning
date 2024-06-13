@@ -9,42 +9,42 @@
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
-        <title>{% block title %}{%endblock%}Gilbert Cleaning Services</title>
+        <link rel="icon" href="{% static 'images/pagelogo.png' %}">
+        <link rel="shortcut icon" href="#">
+        <link rel="icon" href="{% static 'images/favicon.ico' %}">
+        <title>{% block title %}{%endblock%}Gilbert Cleaning</title>
 
-    </head>
+<style>
+    body {
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 20px;
+      }
+      .container-box {
+        position: relative;
+        max-width: 700px;
+        width: 100%;
+        background: #fff;
+        padding: 25px;
+        border-radius: 8px;
+        box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+      }
+      .container-box header {
+        font-size: 1.5rem;
+        color: #333;
+        font-weight: 500;
+        text-align: center;
+    
+      }
+      
+</style>
+</head>
 <body>
-
-<header class="header">
-    <div class="logo">Gilbert.M Cleaning</div>
-    <div id="menu-btn" class="menu-btn">☰</div> 
-    <nav class="nav">
-        <ul class="nav-list">
-            <li><a href="{% url 'index' %}" class="nav-item">Home</a></li>
-            <li><a href="{% url 'services' %}" class="nav-item">Services</a></li>
-            <li><a href="{% url 'login' %}" class="nav-item">Sustainability</a></li>
-        </ul>
-    </nav>
-</header>
-
-<div class="container-item">
-    <div class="image-section">
-        <img src="path/to/your/image.jpg" alt="Service Image" class="service-image">
-    </div>
-
-    <div class="details-section">
-        <h1 class="service-title">Service Name</h1>
-        <p class="service-info"><strong>Price: </strong>Service Price</p>
-        <p class="service-info"><strong>Service Provider: </strong>Service Provider Name</p>
-
-        <p class="service-description">
-            <strong>Description:</strong><br>
-            Detailed description of the service.
-        </p>
-
-        <a href="booking-page-url.html" class="book-button">Book Service</a>
-    </div>
+<div class="container-box">
+    <h2 class="thank-you">The Sustainability Program is not yet Available</h2>
+    <a href="{% url 'index' %}" class="button secondary">Return To Home</a>
 </div>
-
-<script src="{% static 'js/script.js' %}"></script>
 </body>
 </html>

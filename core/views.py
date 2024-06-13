@@ -34,6 +34,10 @@ def login(request):
 def eventsclean(request):
     return render (request, 'core/eventsclean.html')
 
+def thank_you(request):
+    return render(request, 'core/thank_you.html')
+
+
 def book(request):
     if request.method == 'POST':
         name = request.POST.get('name')
@@ -51,6 +55,7 @@ def book(request):
             [settings.ADMIN_EMAIL],
             fail_silently=False,
         )
+        return redirect('thank_you')
 
     return render (request, 'core/book.html')
 
@@ -65,11 +70,14 @@ def enquire(request):
 
         
         send_mail(
-            'New Service Enquiry',
+            'New Cleaning Service Enquiry',
             f'Name: {name}\nEmail: {email}\nPhone: {phone}\nDate: {day}\nService: {service}\nTime: {time}',
             settings.DEFAULT_FROM_EMAIL,
             [settings.ADMIN_EMAIL],
             fail_silently=False,
         )
 
-    return render (request, 'core/enquire.html')
+        
+        return redirect('thank_you')
+
+    return render(request, 'core/enquire.html')

@@ -9,7 +9,10 @@
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
-        <title>{% block title %}{%endblock%}Gilbert Cleaning Services</title>
+        <link rel="icon" href="{% static 'images/pagelogo.png' %}">
+        <link rel="shortcut icon" href="#">
+        <link rel="icon" href="{% static 'images/favicon.ico' %}">
+        <title>{% block title %}{%endblock%}Gilbert Cleaning</title>
 
     </head>
 <body>
@@ -38,7 +41,7 @@
                 <a href="{% url 'services' %}">Home Cleaning</a>
             </li>
             <li class="category-item">
-                <a href="#">Event Cleaning</a>
+                <a href="{% url 'eventsclean' %}">Event Cleaning</a>
             </li>
             <!-- Add more categories as needed -->
         </ul>
@@ -137,7 +140,8 @@
 
         <div class="footer-list">
             <p class="h4 footer-list-title">Subscribe to our Newsletter</p>
-            <form action="" class="input-wrapper">
+            <form action="{% url 'subscribe' %}" method="POST" class="input-wrapper">
+                {% csrf_token %}
                 <input type="email" name="email_address" placeholder="Email Address" required class="input-field">
                 <button type="submit" class="submit-btn">Join</button>
             </form>
